@@ -1,7 +1,9 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:share_plus/share_plus.dart';
 
+import 'app_data_text.dart';
 import 'app_data_words.dart';
 import 'display_words.dart';
 import 'drawer.dart';
@@ -14,6 +16,7 @@ class PageViewWords extends StatefulWidget {
 }
 
 class _PageViewWordsState extends State<PageViewWords> {
+  final FlutterTts _flutterTts = FlutterTts();
   var _selectedIndex = 0;
 
   @override
@@ -90,10 +93,41 @@ class _PageViewWordsState extends State<PageViewWords> {
                 ),
               )
             ],
-          )
+          ),
+          Container(
+            height: 60,
+            width: 60,
+            decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(30)),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 5),
+              child: InkWell(
+                onTap: () {
+                  print("---------------------->Share");
+
+                  _speak(appDataText[_selectedIndex]
+                      .text); // Pass selected word text
+                },
+                child: Padding(
+                    padding: EdgeInsets.only(right: 4),
+                    child: Icon(
+                      Icons.mic,
+                      color: Colors.black,
+                      size: 38,
+                    )),
+              ),
+            ),
+          ),
+
         ],
       ),
     );
+  }
+  void _speak(text) async {
+    await _flutterTts.setLanguage('En');
+    await _flutterTts.setPitch(0.4);
+    await _flutterTts.speak(text);
   }
 
   void shareof() {
