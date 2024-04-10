@@ -95,7 +95,7 @@ class CompanyProfile extends StatelessWidget {
                     color: Colors.black,
                   ),
                   title: Text(
-                    'No.A3,Mahalakshmi Flat,\nSivagami Street,\nNew Perunagalathur.\nChennai-600 026. ',
+                    'No.A3, Mahalakshmi Flat,\nSivagami Street,\nNew Perunagalathur.\nChennai-600 026. ',
                     style: TextStyle(fontSize: 20, color: Colors.black),
                   ),
                 ),

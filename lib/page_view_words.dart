@@ -106,8 +106,8 @@ class _PageViewWordsState extends State<PageViewWords> {
                 onTap: () {
                   print("---------------------->Share");
 
-                  _speak(appDataText[_selectedIndex]
-                      .text); // Pass selected word text
+                  _speak(appDataWords[_selectedIndex]
+                      .words); // Pass selected word text
                 },
                 child: Padding(
                     padding: EdgeInsets.only(right: 4),

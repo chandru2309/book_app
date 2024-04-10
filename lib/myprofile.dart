@@ -69,7 +69,7 @@ class MyProfile extends StatelessWidget {
                     leading: Icon(
                       Icons.email,color: Colors.black,
                     ),
-                    title: Text('chandru@gmail.com',
+                    title: Text('chandrumurugan2306@gmail.com',
                       style: TextStyle(
                           fontSize: 20,color: Colors.black
                       ),),

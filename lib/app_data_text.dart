@@ -9,7 +9,7 @@ List<AppDataText> appDataText = [
   AppDataText(
       'This book teaches you how to "will" not to be,You need be defeated only if you are willing to be.'),
   AppDataText(
-      'It is a pity that people should let themselves be defeated by the problems so quite unnecessary..'),
+      'It is a pity that people should let themselves be defeated by the problems so quite unnecessary.'),
   AppDataText('If you read this book thoughtfully,you can experience an amazing improvement within yourself.'),
   AppDataText(
       'I am publishing this new volume under the title, The Power of Positive Thinking.'),
